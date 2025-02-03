@@ -3,6 +3,13 @@ import random
 def ask_question(question, correct_answer):
     """
     Ask a question and make the player choose the opposite of their answer.
+
+    Parameters:
+    question (str): The question to ask the player.
+    correct_answer (str): The correct answer the player should avoid.
+
+    Returns:
+    bool: True if the player successfully chose the opposite, False otherwise.
     """
     print(question)
     print("Choices:")
@@ -16,10 +23,7 @@ def ask_question(question, correct_answer):
         player_choice = input("Invalid choice! Choose 1 for Yes or 2 for No: ")
     
     # Convert player choice to the actual response
-    if player_choice == "1":
-        player_answer = "Yes"
-    else:
-        player_answer = "No"
+    player_answer = "Yes" if player_choice == "1" else "No"
     
     # Determine if the player's answer is opposite to the correct one
     if player_answer == correct_answer:
@@ -30,6 +34,10 @@ def ask_question(question, correct_answer):
         return True
 
 def main():
+    """
+    Main function that drives the 'Opposite Answer' game.
+    Initializes questions, manages the game loop, and calculates the score.
+    """
     print("Welcome to the 'Opposite Answer' game!")
     print("In this game, you must always choose the opposite of your true answer.\n")
     
@@ -41,13 +49,15 @@ def main():
         ("Do you think Python is easy?", "No")
     ]
     
-    score = 0
+    score = 0  # Tracks the player's score
     random.shuffle(questions)  # Shuffle questions for randomness
     
+    # Game loop to iterate through questions
     for question, correct_answer in questions:
         if ask_question(question, correct_answer):
             score += 1
     
+    # Display final score
     print(f"\nYour final score: {score}/{len(questions)}")
     print("Thanks for playing!")
 
