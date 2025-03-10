@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(218, 124, 124); 
+    background-color: rgb(224, 231, 224); 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     margin:  50px; 
     padding: 0; 
@@ -11,7 +11,7 @@ body {
 }
 
 h1 {
-    color: #932c2c; 
+    color: #8a291a; 
     text-align: center; 
     margin-bottom: 30px; 
 }
@@ -55,7 +55,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none; 
-    color: #e0462b; 
+    color: #831919; 
     font-weight: bold; 
     border-radius: 5px; 
     transition: background-color 0.3s ease; 
@@ -148,7 +148,7 @@ hr {
 }
 
 .search-container button {
-    background-color: #5c8a8a;
+    background-color: #fff4f4;
     border: none;
     padding: 15px;
     border-radius: 50%;  
@@ -163,4 +163,124 @@ hr {
 
 .search-container button:hover {
     background-color: #4c7a7a; 
+}
+
+.calculator {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: center;
+}
+
+.calculator .buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.calculator .buttons button {
+    background-color: #d3cece;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.calculator .buttons button:hover {
+    background-color: #4c7a7a;
+}
+section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #5c8a8a;
+}
+
+section p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+joak
+#exercises-page {
+    background-color: #a9c1b1;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+#exercises-page header h1 {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#exercises-page header p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+#exercises-page section {
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+#exercises-page section h2 {
+    color: #e0462b;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#exercises-page section p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#exercises-page input[type="number"] {
+    padding: 10px;
+    font-size: 1.1rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#exercises-page button {
+    background-color: #5c8a8a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+#exercises-page button:hover {
+    background-color: #4c7a7a;
+}
+
+#exercises-page footer {
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+    padding: 20px 0;
+    margin-top: 40px;
+    background-color: #f1f1f1;
 }

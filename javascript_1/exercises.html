@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Math Problems</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function checkAnswer(id, correctAnswer) {
+            const userAnswer = document.getElementById(id).value;
+            if (userAnswer == correctAnswer) {
+                alert("Correct! Well done.");
+            } else {
+                alert("Incorrect. Try again.");
+            }
+        }
+    </script>
+</head>
+<body id="exercises-page"> 
+    <header>
+        <h1>Practice Math Problems</h1>
+        <p>Test your skills with these exercises!</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Addition Exercise</h2>
+            <p><strong>Problem:</strong> 15 + 7</p>
+            <input type="number" id="addition-answer" placeholder="Your answer">
+            <button onclick="checkAnswer('addition-answer', 22)">Check Answer</button>
+        </section>
+
+        <section>
+            <h2>2. Subtraction Exercise</h2>
+            <p><strong>Problem:</strong> 20 - 8</p>
+            <input type="number" id="subtraction-answer" placeholder="Your answer">
+            <button onclick="checkAnswer('subtraction-answer', 12)">Check Answer</button>
+        </section>
+
+        <section>
+            <h2>3. Multiplication Exercise</h2>
+            <p><strong>Problem:</strong> 6 × 9</p>
+            <input type="number" id="multiplication-answer" placeholder="Your answer">
+            <button onclick="checkAnswer('multiplication-answer', 54)">Check Answer</button>
+        </section>
+
+        <section>
+            <h2>4. Division Exercise</h2>
+            <p><strong>Problem:</strong> 72 ÷ 8</p>
+            <input type="number" id="division-answer" placeholder="Your answer">
+            <button onclick="checkAnswer('division-answer', 9)">Check Answer</button>
+        </section>
+
+        <section>
+            <h2>5. Addition Exercise</h2>
+            <p><strong>Problem:</strong> 25 + 14</p>
+            <input type="number" id="addition2-answer" placeholder="Your answer">
+            <button onclick="checkAnswer('addition2-answer', 39)">Check Answer<

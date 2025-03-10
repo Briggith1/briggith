@@ -1,17 +1,50 @@
-let num1 = 10;
-let num2 = 5;
-let sum = num1 + num2; 
-console.log("The sum of", num1, "and", num2, "is", sum); 
+document.getElementById('add-btn').addEventListener('click', function () {
+    performCalculation('add');
+});
 
-let resultElement = document.getElementById('result'); 
-resultElement.innerHTML = "The sum of " + num1 + " and " + num2 + " is: " + sum;
+document.getElementById('subtract-btn').addEventListener('click', function () {
+    performCalculation('subtract');
+});
 
-let age = 16;
-const birthYear = 2008;
+document.getElementById('multiply-btn').addEventListener('click', function () {
+    performCalculation('multiply');
+});
 
-if (age >= 18 && birthYear <= 2007) {
-    console.log('You are an adult and born before 2007');
-} else {
-    console.log('Either you are not an adult or you were born after 2007');
+document.getElementById('divide-btn').addEventListener('click', function () {
+    performCalculation('divide');
+});
+
+function performCalculation(operation) {
+    const num1 = parseFloat(document.getElementById('number1').value);
+    const num2 = parseFloat(document.getElementById('number2').value);
+    let result;
+
+    if (isNaN(num1) || isNaN(num2)) {
+        alert('Please enter valid numbers!');
+        return;
+    }
+
+    switch (operation) {
+        case 'add':
+            result = num1 + num2;
+            break;
+        case 'subtract':
+            result = num1 - num2;
+            break;
+        case 'multiply':
+            result = num1 * num2;
+            break;
+        case 'divide':
+            if (num2 === 0) {
+                alert('Cannot divide by zero!');
+                return;
+            }
+            result = num1 / num2;
+            break;
+        default:
+            alert('Invalid operation!');
+            return;
+    }
+
+    document.getElementById('result-message').innerText = `The result is: ${result}`;
 }
-
