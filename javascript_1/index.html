@@ -3,51 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Webpage</title>
+    <title>Mathematics Learning Platform</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Body background color */
+        body {
+            background-color: #f3f4f6; /* Light gray pastel */
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navbar */
+        .navbar-light {
+            background-color: #f1f1f1; /* Soft pastel gray */
+        }
+
+        .navbar-nav .nav-item a {
+            color: #6c757d; /* Soft gray color */
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-item a:hover {
+            color: #ffb6b9; /* Soft pastel pink */
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #a8c0d1, #f1c6c0); /* Pastel blue to pastel pink */
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero-section .btn-primary {
+            background-color: #ffb6b9; /* Soft pastel pink */
+            border-color: #ffb6b9;
+        }
+
+        .hero-section .btn-primary:hover {
+            background-color: #ff7b7b; /* Slightly darker pink */
+            border-color: #ff7b7b;
+        }
+
+        /* Features Section */
+        .feature-icon {
+            width: 80px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .features {
+            padding: 50px 0;
+            background-color: #f7f7f7; /* Light pastel gray */
+        }
+
+        .features h3 {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .features p {
+            font-size: 1rem;
+        }
+
+        .features .col-md-4 {
+            margin-bottom: 30px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: #e9f7f2; /* Light pastel green */
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .testimonial p strong {
+            font-weight: bold;
+            color: #444;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #f1f1f1; /* Light pastel gray */
+            color: #555;
+            padding: 20px 0;
+        }
+
+        .footer p {
+            margin-bottom: 0;
+        }
+
+        /* Links and Buttons */
+        .btn {
+            padding: 12px 20px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .btn-primary {
+            background-color: #ffb6b9; /* Pastel pink */
+            border-color: #ffb6b9;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff7b7b; /* Slightly darker pink */
+            border-color: #ff7b7b;
+        }
+
+        .search-container {
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        #search {
+            padding: 10px;
+            width: 300px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        #search-icon {
+            background-color: #ffb6b9;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #search-icon img {
+            width: 20px;
+            height: 20px;
+        }
+
+    </style>
 </head>
 <body>
-    <section>
-        <h1 id="my-heading">Start typing to search!</h1>
-    </section>
-
-    <header>
-        <h1>Welcome to the Mathematical Learning Platform</h1>
-        <p>This page is designed to help students of all ages improve their understanding of mathematics in an easy and fun way. With interactive lessons, hands-on exercises, and real-time feedback, you'll master everything from basic operations to more advanced concepts.</p>
+    <header class="navbar-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">Math Academy</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="exercises.html">Exercises</a></li>
+                        <li class="nav-item"><a class="nav-link" href="step-by-step-lessons.html">Lessons</a></li>
+                        <li class="nav-item"><a class="nav-link" href="interactive.html">Calculator</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pagine.html">Resources</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li> <!-- Added login link -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="exercises.html">Exercises</a></li>
-            <li><a href="step-by-step-lessons.html">Step by Step Lessons</a></li>
-            <li><a href="interactive.html">Calculator</a></li>
-            <li><a href="boot.html">Pagine</a></li>
-        </ul>
-    </nav>
-
-    <div class="search-container">
-        <input type="text" id="search" name="search" placeholder="Search for your topic">
-        <button type="submit" id="search-icon">
-            <img src="https://cdn.pixabay.com/photo/2017/01/13/01/22/magnifying-glass-1976105_1280.png" alt="Search Icon" width="40" height="40">
-        </button>
-    </div>
-
-    <main>
-        <article>
-            <h2>Basic Mathematics</h2>
-            <p>This article teaches people under 13.</p>
-        </article>
-
-        <p id="result"></p>
+    <main class="hero-section">
+        <div class="container text-center">
+            <h1>Welcome to Math Academy</h1>
+            <p>Empower your learning journey with interactive lessons, exercises, and tools to master mathematics at your own pace.</p>
+            <a href="exercises.html" class="btn btn-primary btn-lg">Get Started</a>
+        </div>
     </main>
 
-    <footer>
-        <hr>
-        <p>Author: Briggith Cardenas</p>
-        <p>&copy; 2025 Briggith's Website</p>
+    <section class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <img src="lesson-icon.png" alt="Lessons" class="feature-icon">
+                    <h3>Step-by-Step Lessons</h3>
+                    <p>Detailed explanations to build your understanding from the ground up.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="exercise-icon.png" alt="Exercises" class="feature-icon">
+                    <h3>Interactive Exercises</h3>
+                    <p>Practice what you’ve learned with guided questions and instant feedback.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="calculator-icon.png" alt="Calculator" class="feature-icon">
+                    <h3>Powerful Tools</h3>
+                    <p>Access a calculator and other learning aids for a seamless experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <p>"Math Academy helped me understand concepts I was struggling with for months. The step-by-step lessons are amazing!"</p>
+                        <p><strong>John Doe</strong></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <p>"The interactive exercises are a game-changer! I can practice and get feedback instantly, which keeps me engaged."</p>
+                        <p><strong>Jane Smith</strong></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <p>"The calculator tool is incredibly helpful. I can solve problems faster and check my work."</p>
+                        <p><strong>Mike Johnson</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer text-center py-4">
+        <div class="container">
+            <p>&copy; 2025 Math Academy. All Rights Reserved.</p>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

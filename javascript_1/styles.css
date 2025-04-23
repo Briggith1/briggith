@@ -284,3 +284,79 @@ joak
     margin-top: 40px;
     background-color: #f1f1f1;
 }
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-header {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #2c3e50 !important;
+}
+
+.nav-link {
+    color: #2c3e50 !important;
+    font-size: 1rem;
+}
+
+.hero-section {
+    background-color: #34495e;
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-section .btn-primary {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+}
+
+.features {
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+.features .feature-icon {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.features h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.features p {
+    color: #7f8c8d;
+    font-size: 1rem;
+}
+
+.footer {
+    background-color: #f9f9f9;
+    color: #7f8c8d;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
