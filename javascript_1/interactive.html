@@ -7,8 +7,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="exercises.html">Exercises</a></li>
+            <li><a href="interactive.html">Calculator</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
     <header>
-        <h1>Math Lab: Solve your math problems instantly</h1>
+        <h1>Math Lab: Solve Your Math Problems Instantly</h1>
         <p>It emphasizes simplicity and speed, which is very attractive to students looking for efficiency.</p>
     </header>
 
@@ -35,10 +45,42 @@
     </main>
 
     <footer>
-        <hr>
-        <p>&copy; 2025 Math Learning Platform</p>
+        <p class="author">Your Math Learning Hub</p>
+        <p class="copyright">© 2025 All rights reserved</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('add-btn').addEventListener('click', () => {
+            const num1 = parseFloat(document.getElementById('number1').value);
+            const num2 = parseFloat(document.getElementById('number2').value);
+            const result = num1 + num2;
+            document.getElementById('result-message').textContent = `Result: ${result}`;
+        });
+
+        document.getElementById('subtract-btn').addEventListener('click', () => {
+            const num1 = parseFloat(document.getElementById('number1').value);
+            const num2 = parseFloat(document.getElementById('number2').value);
+            const result = num1 - num2;
+            document.getElementById('result-message').textContent = `Result: ${result}`;
+        });
+
+        document.getElementById('multiply-btn').addEventListener('click', () => {
+            const num1 = parseFloat(document.getElementById('number1').value);
+            const num2 = parseFloat(document.getElementById('number2').value);
+            const result = num1 * num2;
+            document.getElementById('result-message').textContent = `Result: ${result}`;
+        });
+
+        document.getElementById('divide-btn').addEventListener('click', () => {
+            const num1 = parseFloat(document.getElementById('number1').value);
+            const num2 = parseFloat(document.getElementById('number2').value);
+            if (num2 === 0) {
+                document.getElementById('result-message').textContent = 'Error: Division by zero is not allowed.';
+            } else {
+                const result = num1 / num2;
+                document.getElementById('result-message').textContent = `Result: ${result}`;
+            }
+        });
+    </script>
 </body>
 </html>
