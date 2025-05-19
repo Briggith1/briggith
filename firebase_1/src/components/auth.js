@@ -1,49 +1,60 @@
-import React, { useState } from 'react';
-import { auth } from '../config/firebase';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import '../css/auth.css';  // Make sure you have the CSS file
-
+import { auth } from "../config/firebase";
+import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut} from "firebase/auth";
+import React, {useState} from "react";
+import '../css/auth.css'
 function Auth() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
-    async function signIn() {
-        try {
-            await signInWithEmailAndPassword(auth, email, password);
-            setError('');
-        } catch (err) {
-            setError('Invalid email or password');
-        }
+    console.log(auth?.currentUser?.email)
+
+async function signUp() {
+    try { 
+        await createUserWithEmailAndPassword(auth, email, password)
+    }
+    catch(err) {
+        alert(err)
+
+    }
+};
+async function signIn() {
+    try {
+        await signInWithEmailAndPassword(auth, email, password)
+    }
+    catch(err) {
+        alert(err)
+    }
+}
+async function logout() {
+    try{
+        await signOut(auth);
+    }catch(err) {
+        console.error(err);
+    }
     }
 
-    return (
-        <div className="auth-page">
-            <div className="auth-container">
-                <h2>Sign In</h2>
-                <form>
-                    <input 
-                        type="email" 
-                        placeholder="Email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <input 
-                        type="password" 
-                        placeholder="Password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                    {error && <p className="error-message">{error}</p>}
-                    <button type="button" onClick={signIn}>Sign In</button>
-                </form>
-                <div className="footer-links">
-                    <a href="#">Forgot password?</a>
-                    <a href="#">Create an account</a>
-                </div>
-            </div>
+
+
+
+    return(
+      
+
+<div class="container" id="form-container">
+    <h2 id="form-title">Sign in</h2>
+    <input id="username" placeholder="Email.."
+                onChange={(e)   => setEmail (e.target.value)}
+                />
+  <input id="password" placeholder="password.."
+            type="password"
+            onChange={(e) => setPassword(e.target.value)}
+            />
+            <button onClick={signUp}>Sign Up</button>
+            <button onClick={signIn}>Sign In</button>
+            <button onClick={logout}>Sign Out</button>
+    <div class="toggle" onclick="toggleForm()">Don't have an account? Sign up</div>
+
         </div>
-    );
+    )
 }
 
 export default Auth;
